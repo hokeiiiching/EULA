@@ -1,0 +1,61 @@
+# EULA Project - Python Dependencies
+# ===================================
+# Install with: pip install -r requirements.txt
+#
+# For development (includes test tools):
+#   pip install -r requirements.txt -r requirements-dev.txt
+
+# =============================================================================
+# Core Web Framework
+# =============================================================================
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# =============================================================================
+# Database
+# =============================================================================
+sqlalchemy[asyncio]>=2.0.25
+asyncpg>=0.29.0
+alembic>=1.13.0
+
+# =============================================================================
+# OCR & Document Processing
+# =============================================================================
+# NOTE: python-doctr requires PyTorch or TensorFlow backend
+# Install with: pip install "python-doctr[torch]"
+python-doctr[torch]>=0.7.0
+
+# PDF handling (required by doctr)
+pypdf>=3.17.0
+pdf2image>=1.16.3
+
+# Image processing
+Pillow>=10.2.0
+
+# =============================================================================
+# XRPL Blockchain
+# =============================================================================
+xrpl-py>=2.5.0
+
+# =============================================================================
+# Security & Auth
+# =============================================================================
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+
+# =============================================================================
+# Utilities
+# =============================================================================
+python-multipart>=0.0.6
+httpx>=0.26.0
+aiofiles>=23.2.0
+reportlab>=4.0.0
+
+# =============================================================================
+# System Dependencies (install via brew/apt, not pip)
+# =============================================================================
+# macOS: brew install poppler
+# Ubuntu: apt install poppler-utils
+# Windows: Download from https://github.com/oschwartz10612/poppler-windows

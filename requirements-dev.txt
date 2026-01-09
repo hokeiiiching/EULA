@@ -1,0 +1,22 @@
+# EULA Project - Development Dependencies
+# ========================================
+# Install with: pip install -r requirements-dev.txt
+
+# Testing
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+pytest-cov>=4.1.0
+httpx>=0.26.0
+
+# Code Quality
+ruff>=0.1.14
+mypy>=1.8.0
+black>=24.1.0
+isort>=5.13.0
+
+# For generating test PDFs
+reportlab>=4.0.0
+
+# Type stubs
+types-Pillow>=10.2.0
+types-aiofiles>=23.2.0

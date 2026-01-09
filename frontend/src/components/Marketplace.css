@@ -1,0 +1,477 @@
+/**
+ * Marketplace Styles
+ * 
+ * Premium styling for the invoice marketplace with search functionality.
+ */
+
+.marketplace {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 2rem;
+}
+
+/* Header */
+.marketplace-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.marketplace-header .header-content h1 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+    background: linear-gradient(135deg, #00d4aa, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.marketplace-header .header-content p {
+    color: #8b8b9e;
+    margin: 0;
+}
+
+.marketplace .close-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.marketplace .close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Wallet Status */
+.wallet-status {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.wallet-status .status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.wallet-status .status-dot.connected {
+    background: #00d4aa;
+    box-shadow: 0 0 8px rgba(0, 212, 170, 0.5);
+}
+
+.wallet-status .status-dot.disconnected {
+    background: #f87171;
+}
+
+.wallet-status .label {
+    color: #8b8b9e;
+    font-size: 0.9rem;
+}
+
+.wallet-status .address {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    color: #00d4aa;
+    font-weight: 500;
+}
+
+.wallet-status .btn-sm {
+    margin-left: auto;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+}
+
+/* Search Section */
+.search-section {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.search-section h3 {
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+}
+
+.search-section .search-hint {
+    color: #8b8b9e;
+    margin: 0 0 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+.search-input-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.search-input {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    transition: all 0.2s ease;
+}
+
+.search-input::placeholder {
+    color: #6b6b7e;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+.search-input:disabled {
+    opacity: 0.6;
+}
+
+.search-btn {
+    padding: 1rem 2rem;
+    white-space: nowrap;
+}
+
+.search-message {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.search-message.error {
+    background: rgba(248, 113, 113, 0.1);
+    color: #f87171;
+    border: 1px solid rgba(248, 113, 113, 0.2);
+}
+
+/* Search Results */
+.search-results {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.search-results h3 {
+    color: #fff;
+    margin: 0 0 1rem 0;
+}
+
+.nft-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.nft-info .label {
+    color: #8b8b9e;
+    font-size: 0.85rem;
+}
+
+.nft-info code {
+    background: rgba(124, 58, 237, 0.2);
+    color: #a78bfa;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.nft-info .explorer-link.small {
+    margin-left: auto;
+    color: #8b8b9e;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.nft-info .explorer-link.small:hover {
+    color: #7c3aed;
+}
+
+/* Offers List */
+.offers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.offer-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.offer-card:hover {
+    border-color: rgba(124, 58, 237, 0.4);
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.1);
+}
+
+.offer-details {
+    display: flex;
+    gap: 3rem;
+}
+
+.offer-details .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.offer-details .label {
+    color: #8b8b9e;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.offer-details .value {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.offer-details .value.highlight {
+    color: #00d4aa;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.offer-card .buy-btn {
+    padding: 0.75rem 1.5rem;
+}
+
+/* Purchase Success */
+.purchase-success {
+    background: linear-gradient(135deg, rgba(0, 212, 170, 0.15), rgba(16, 185, 129, 0.1));
+    border: 1px solid rgba(0, 212, 170, 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.purchase-success h3 {
+    color: #00d4aa;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.purchase-success p {
+    color: #8b8b9e;
+    margin: 0 0 1rem 0;
+}
+
+.purchase-success .explorer-link {
+    display: inline-block;
+    color: #7c3aed;
+    margin-bottom: 1rem;
+}
+
+/* Notice of Assignment */
+.notice-of-assignment {
+    background: rgba(251, 191, 36, 0.1);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.notice-of-assignment h4 {
+    color: #fbbf24;
+    margin: 0 0 0.75rem 0;
+    font-size: 1.1rem;
+}
+
+.notice-of-assignment>p {
+    color: #d1d5db;
+    margin: 0 0 1rem 0;
+    font-size: 0.95rem;
+}
+
+.notice-details {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+}
+
+.notice-details p {
+    color: #e5e7eb;
+    margin: 0 0 0.75rem 0;
+    font-size: 0.9rem;
+}
+
+.notice-details ul {
+    margin: 0 0 1rem 0;
+    padding-left: 1.25rem;
+    color: #9ca3af;
+}
+
+.notice-details li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.notice-details .legal-note {
+    color: #8b8b9e;
+    font-size: 0.85rem;
+    margin: 0;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Instructions */
+.instructions {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.instructions h3 {
+    color: #fff;
+    margin: 0 0 1rem 0;
+}
+
+.instructions ol {
+    margin: 0;
+    padding-left: 1.5rem;
+    color: #8b8b9e;
+}
+
+.instructions li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.instructions strong {
+    color: #00d4aa;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.empty-state .empty-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+}
+
+.empty-state p {
+    color: #8b8b9e;
+    margin: 0;
+}
+
+/* Button Styles */
+.marketplace .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.marketplace .btn-primary {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    color: #fff;
+}
+
+.marketplace .btn-primary:hover:not(:disabled) {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    transform: translateY(-2px);
+}
+
+.marketplace .btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.marketplace .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.marketplace .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .marketplace {
+        padding: 1rem;
+    }
+
+    .marketplace-header .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .search-input-group {
+        flex-direction: column;
+    }
+
+    .offer-card {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+
+    .offer-details {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .offer-card .buy-btn {
+        width: 100%;
+    }
+}

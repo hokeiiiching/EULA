@@ -1,0 +1,388 @@
+/**
+ * MintingPanel styles
+ * 
+ * Premium styling for the NFT minting interface.
+ */
+
+.minting-panel {
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.minting-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(75, 0, 130, 0.2));
+    border-radius: 12px 12px 0 0;
+}
+
+.minting-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+.close-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+}
+
+/* Crossmark Warning */
+.crossmark-warning {
+    margin: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(251, 146, 60, 0.2), rgba(234, 88, 12, 0.2));
+    border: 1px solid rgba(251, 146, 60, 0.4);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.crossmark-warning p {
+    margin: 0.5rem 0;
+    color: var(--text-secondary);
+}
+
+.crossmark-warning .btn-sm {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.invoice-summary {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.invoice-summary h4 {
+    margin: 0 0 1rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.summary-item .label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.summary-item .value {
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.summary-item.highlight .value {
+    font-size: 1.125rem;
+    color: var(--color-success);
+}
+
+/* Pricing Section */
+.pricing {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.pricing h4 {
+    margin: 0 0 1rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.discount-control {
+    margin-bottom: 1rem;
+}
+
+.discount-control label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.discount-input {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.discount-input input[type="range"] {
+    flex: 1;
+    height: 6px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    outline: none;
+}
+
+.discount-input input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.4);
+}
+
+.discount-value {
+    min-width: 40px;
+    text-align: right;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.price-preview {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.price-item.discount {
+    color: var(--color-error);
+}
+
+.price-item.sale-price {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 0.75rem;
+    margin-top: 0.25rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.price-item .highlight {
+    color: var(--color-success);
+    font-size: 1.125rem;
+}
+
+/* Progress Steps */
+.minting-progress {
+    margin: 1rem;
+    padding: 1.25rem;
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    padding-left: 1rem;
+    margin-left: 0.5rem;
+    color: var(--text-muted);
+}
+
+.progress-step:first-child {
+    padding-top: 0;
+}
+
+.progress-step:last-child {
+    padding-bottom: 0;
+}
+
+.progress-step.active {
+    color: var(--color-primary);
+    border-left-color: var(--color-primary);
+}
+
+.progress-step.active .step-icon {
+    animation: spin 1s linear infinite;
+}
+
+.progress-step.complete {
+    color: var(--color-success);
+    border-left-color: var(--color-success);
+}
+
+.step-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+}
+
+.step-text {
+    font-size: 0.875rem;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Status Message */
+.status-message {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.status-message.confirmed {
+    color: var(--color-success);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.status-message.error {
+    color: var(--color-error);
+}
+
+/* Mint Result */
+.mint-result {
+    margin: 1rem;
+    padding: 1.25rem;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1));
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.mint-result h4 {
+    margin: 0 0 1rem;
+    color: var(--color-success);
+    font-size: 1rem;
+}
+
+.result-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item .label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.result-item .value {
+    font-size: 0.875rem;
+    color: var(--text-primary);
+}
+
+.result-item code.value {
+    font-family: 'Monaco', 'Menlo', monospace;
+    font-size: 0.75rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.result-item .value.highlight {
+    color: var(--color-success);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.explorer-link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: rgba(139, 92, 246, 0.1);
+    border-radius: 8px;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.explorer-link:hover {
+    background: rgba(139, 92, 246, 0.2);
+}
+
+/* Actions */
+.minting-actions {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.minting-actions .btn {
+    min-width: 160px;
+}
+
+/* Modal Overlay (used when showing minting panel as modal) */
+.minting-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.minting-modal {
+    background: var(--bg-card);
+    border-radius: 16px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
